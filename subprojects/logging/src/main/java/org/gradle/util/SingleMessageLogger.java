@@ -54,12 +54,7 @@ public class SingleMessageLogger {
         LOCK.lock();
         try {
             if (deprecationMessage == null) {
-                String messageBase = "has been deprecated and is scheduled to be removed in";
-
-                GradleVersion currentVersion = GradleVersion.current();
-                String when = String.format("Gradle %s", currentVersion.getNextMajor().getVersion());
-
-                deprecationMessage = String.format("%s %s", messageBase, when);
+                deprecationMessage = GUtil.getDeprecationMessage();
             }
             return deprecationMessage;
         } finally {

@@ -15,6 +15,8 @@
  */
 package org.gradle.cli;
 
+import org.gradle.util.GUtil;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -61,9 +63,11 @@ public class CommandLineOption {
             if (result.length() > 0) {
                 result.append(' ');
             }
-            result.append("[deprecated - ");
-            result.append(deprecationWarning);
-            result.append("]");
+            result.append("[deprecated - ")
+                .append(GUtil.getDeprecationMessage())
+                .append(". ")
+                .append(deprecationWarning)
+                .append("]");
         }
         if (incubating) {
             if (result.length() > 0) {

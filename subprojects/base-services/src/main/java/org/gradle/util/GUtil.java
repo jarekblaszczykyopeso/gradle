@@ -492,4 +492,7 @@ public class GUtil {
         return result;
     }
 
+    public static String getDeprecationMessage() {
+        return String.format("has been deprecated and is scheduled to be removed in Gradle %s", GradleVersion.current().getNextMajor().getVersion());
+    }
 }

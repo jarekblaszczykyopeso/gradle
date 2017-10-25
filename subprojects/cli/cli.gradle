@@ -22,6 +22,10 @@
 */
 apply plugin: 'java-library'
 
+dependencies {
+   api project(':baseServices')
+}
+
 sourceCompatibility = javaVersion.java9Compatible ? 1.6 : 1.5
 
 useClassycle()

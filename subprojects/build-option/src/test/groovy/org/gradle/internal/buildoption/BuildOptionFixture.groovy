@@ -75,6 +75,6 @@ final class BuildOptionFixture {
     }
 
     static void assertDeprecatedDescription(CommandLineOption option, String deprecationWarning, String desc) {
-        assert option.description == "$desc [deprecated - $deprecationWarning]"
+        assert option.description == "$desc [deprecated - has been deprecated and is scheduled to be removed in Gradle 5.0. $deprecationWarning]"
     }
 }
