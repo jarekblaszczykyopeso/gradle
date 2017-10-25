@@ -445,7 +445,7 @@ While the `cpp` plugin defines these default locations for each api:org.gradle.l
             </sample>
 ++++
 
-For a library named 'main', header files in `src/main/headers` are considered the âpublicâ or âexportedâ headers. Header files that should not be exported should be placed inside the `src/main/cpp` directory (though be aware that such header files should always be referenced in a manner relative to the file including them).
+For a library named 'main', header files in `src/main/headers` are considered the "public" or "exported" headers. Header files that should not be exported should be placed inside the `src/main/cpp` directory (though be aware that such header files should always be referenced in a manner relative to the file including them).
 
 [[sec:c_sources]]
 ==== C sources
